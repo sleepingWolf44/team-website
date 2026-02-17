@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    border: 0; 
+}
+nav{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: rgb(119, 59, 150);
+}
+#banner{
+    width: 100%; 
+    height: 400px; 
+    display: block;
+    opacity: 60%;
+}
+#flex{
+    display: flex;
+}
+#navbutton{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width:25%;
+    height:40px;
+    background-color: rgb(78, 37, 87);
+}
+#navbutton:hover{
+    margin: 0;
+    padding: 0;
+    border: 10;
+    width:30%;
+    height:40px;
+    background-color: rgb(94, 43, 119);
+}
