@@ -7,46 +7,32 @@
         <meta name="google" content="notranslate">
         <script src="./team.js"></script>
         <link rel="stylesheet" href="./team.css">
-        <link rel="stylesheet" href="font.css">
+        <link rel="stylesheet" href="./font.css">
         <style>
             body {
-                
+                background-color: #30183a;
             }
-            .introduction {
-                font-family: 'neonSignFont', sans-serif, Arial;
-                p, h1, h2, h3, h4, h5, h6 {
-                    color: rgba(1,1,1,1);
-                }
+            h1, h2, h3, h4, h5, h6 {
+                font-family: 'NeonSignFont', 'Comic Sans MS';
+                font-size: 475%;
             }
-            .navigationBar {
-                font-family: 'neonSignFont', sans-serif, Arial;
-                p, h1, h2, h3, h4, h5, h6, {
-                    color: rgba(255, 61, 245, 0.95);
-                }
-                #navbutton {
-                    color: rgba(255, 61, 61, 0.95);
-                }
-                #navbutton:hover {
-                    color: rgba(255, 0, 0, 0.475);
-                }
-            }
-            .suggestion {
-                font-family: 'neonSignFont', sans-serif, Arial;
-                p, h1, h2, h3, h4, h5, h6 {
-                    color: rgba(1,1,1,1);
-                }
+            .outlined {
+                border: 25%;
             }
         </style>
     </head>
     <body>
         <nav>
-            <div id="flex">
-            <input type="button" value="Home" id="navbutton" onclick="Home()">
-            <input type="button" value="Menu" id="navbutton" onclick="Menu()">
-            <input type="button" value="Order" id="navbutton" onclick="Order()">
-            <input type="button" value="Contacts" id="navbutton" onclick="Contacts()">
+            <div id="customfont">
+                <div id="flex">
+                    <input type="button" value="Home" id="navbutton" onclick="Home()" style="font-family: 'NeonSignFont', 'Comic Sans MS';">
+                    <input type="button" value="Menu" id="navbutton" onclick="Menu()" style="font-family: 'NeonSignFont', 'Comic Sans MS';">
+                    <input type="button" value="Order" id="navbutton" onclick="Order()" style="font-family: 'NeonSignFont', 'Comic Sans MS';">
+                    <input type="button" value="Contacts" id="navbutton" onclick="Contacts()" style="font-family: 'NeonSignFont', 'Comic Sans MS';">
+                </div>
             </div>
             <img src="./imgs/midnightCity.png" alt="midnightCity" id="banner">
         </nav>
+        <h1 style="color: red;" class="outlined">Test</h1>
     </body>
 </html>
