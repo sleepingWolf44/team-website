@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google" content="notranslate" />
+  <title>/|\ Noodles Past Midnight - Menu /|\</title>
+
+  <script src="./team.js"></script>
+  <link rel="stylesheet" href="./team.css" />
+  <link rel="stylesheet" href="./font.css" />
+
+  <style>
+    :root{
+      --bg: #0b0f1a;
+      --panel: rgba(10, 14, 28, 0.78);
+      --stroke: rgba(255, 61, 245, 0.35);
+      --neon-pink: rgba(255, 61, 245, 0.95);
+      --neon-cyan: rgba(0, 255, 255, 0.85);
+      --neon-lime: rgba(168, 255, 0, 0.85);
+      --text: rgba(235, 235, 255, 0.92);
+      --muted: rgba(235, 235, 255, 0.70);
+    }
+    body{
+      background: radial-gradient(1200px 700px at 15% 10%, rgba(255, 61, 245, 0.20), transparent 55%),
+                  radial-gradient(1000px 600px at 85% 20%, rgba(0, 255, 255, 0.14), transparent 55%),
+                  radial-gradient(900px 600px at 55% 85%, rgba(168, 255, 0, 0.10), transparent 60%),
+                  var(--bg);
+      color: var(--text);
+    }
+    nav, #navbutton{
+      font-family: 'neonSignFont', system-ui, Arial, sans-serif;
+      letter-spacing: 0.5px;
+    }
+    .page {
+      width: min(1100px, 92vw);
+      margin: 0 auto;
+      padding: 24px 0 40px;
+    }
+    .hero {
+      margin-top: 14px;
+      padding: 16px 18px;
+      background: linear-gradient(135deg, rgba(255, 61, 245, 0.12), rgba(0, 255, 255, 0.08));
+      border: 1px solid var(--stroke);
+      border-radius: 14px;
+      box-shadow: 0 0 18px rgba(255, 61, 245, 0.12), 0 0 22px rgba(0, 255, 255, 0.08);
+    }
+    .hero h1{
+      margin: 0 0 6px;
+      font-family: 'neonSignFont', system-ui, Arial, sans-serif;
+      color: var(--neon-pink);
+      text-shadow: 0 0 10px rgba(255, 61, 245, 0.35);
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.05;
+    }
+    .hero p{
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.45;
+    }
+    .legend {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 999px;
+      background: rgba(10, 14, 28, 0.45);
+    }
+    .dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      box-shadow: 0 0 10px rgba(255,255,255,0.20);
+    }
+    .dot.p { background: var(--neon-pink); box-shadow: 0 0 12px rgba(255, 61, 245, 0.55); }
+    .dot.c { background: var(--neon-cyan); box-shadow: 0 0 12px rgba(0, 255, 255, 0.45); }
+    .dot.l { background: var(--neon-lime); box-shadow: 0 0 12px rgba(168, 255, 0, 0.35); }
+    .section {
+      margin-top: 22px;
+      padding: 16px;
+      background: var(--panel);
+      border: 1px solid var(--stroke);
+      border-radius: 16px;
+      backdrop-filter: blur(6px);
+    }
+    .section-header{
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      margin-bottom: 14px;
+    }
+    .section-header h2{
+      margin: 0;
+      font-family: 'neonSignFont', system-ui, Arial, sans-serif;
+      color: var(--neon-cyan);
+      text-shadow: 0 0 10px rgba(0, 255, 255, 0.25);
+      font-size: clamp(20px, 2.6vw, 30px);
+    }
+    .section-header small{
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .item {
+      padding: 14px 14px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: linear-gradient(180deg, rgba(255, 61, 245, 0.06), rgba(0, 255, 255, 0.03));
+      box-shadow: 0 0 18px rgba(255, 61, 245, 0.06);
+    }
+    .item-top{
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .item h3{
+      margin: 0;
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.95);
+      letter-spacing: 0.2px;
+    }
+    .price{
+      font-family: 'neonSignFont', system-ui, Arial, sans-serif;
+      color: var(--neon-lime);
+      text-shadow: 0 0 10px rgba(168, 255, 0, 0.22);
+      font-size: 16px;
+      white-space: nowrap;
+    }
+    .desc{
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.35;
+    }
+    .spice {
+      margin-top: 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 61, 245, 0.28);
+      background: rgba(255, 61, 245, 0.06);
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 12px;
+    }
+    .spice b{
+      color: var(--neon-pink);
+      font-weight: 700;
+    }
+    @media (max-width: 900px){
+      .grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px){
+      .grid { grid-template-columns: 1fr; }
+      #banner { height: 240px; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div id="flex">
+      <input type="button" value="Home" id="navbutton" onclick="Home()">
+      <input type="button" value="Menu" id="navbutton" onclick="Menu()">
+      <input type="button" value="Order" id="navbutton" onclick="Order()">
+      <input type="button" value="Contacts" id="navbutton" onclick="Contacts()">
+    </div>
+    <img src="./imgs/midnightCity.png" alt="midnightCity" id="banner">
+  </nav>
+  <main class="page">
+    <section class="hero">
+      <h1>Menu</h1>
+      <p>
+        Street-noodle fusion served under midnight lights. Choose your build, then hit the Order page when you’re ready.
+      </p>
+      <div class="legend">
+        <span class="tag"><span class="dot p"></span> Neon Heat (spicy)</span>
+        <span class="tag"><span class="dot c"></span> Cold-Glow (refreshing)</span>
+        <span class="tag"><span class="dot l"></span> Street-Sweet (dessert)</span>
+      </div>
+    </section>
+    <section class="section" id="appetizers">
+      <div class="section-header">
+        <h2>Appetizers</h2>
+        <small>Small bites, big glow.</small>
+      </div>
+
+      <div class="grid">
+        <article class="item">
+          <div class="item-top">
+            <h3>Neon Gyoza (6pc)</h3>
+            <span class="price">$7.99</span>
+          </div>
+          <p class="desc">Pan-seared dumplings, soy-glitch glaze, scallion sparks.</p>
+          <span class="spice"><b>Heat:</b> Mild</span>
+        </article>
+
+        <article class="item">
+          <div class="item-top">
+            <h3>Circuit Tempura Shrooms</h3>
+            <span class="price">$8.49</span>
+          </div>
+          <p class="desc">Crispy tempura mushrooms with neon-lime aioli.</p>
+          <span class="spice"><b>Heat:</b> None</span>
+        </article>
+
+        <article class="item">
+          <div class="item-top">
+            <h3>Byte-Size Bao (2pc)</h3>
+            <span class="price">$6.99</span>
+          </div>
+          <p class="desc">Steamed buns, hoisin drizzle, pickled veggies, sesame static.</p>
+          <span class="spice"><b>Heat:</b> Medium</span>
+        </article>
+      </div>
+    </section>
+    <section class="section" id="entrees">
+      <div class="section-header">
+        <h2>Entrees | Noodles Past Midnight</h2>
+        <small>Our mainline builds.</small>
+      </div>
+
+      <div class="grid">
+        <article class="item">
+          <div class="item-top">
+            <h3>Midnight Ramen // Classic</h3>
+            <span class="price">$12.99</span>
+          </div>
+          <p class="desc">Rich broth, soft egg, scallions, nori, and a clean cyber-salt finish.</p>
+          <span class="spice"><b>Heat:</b> Mild</span>
+        </article>
+
+        <article class="item">
+          <div class="item-top">
+            <h3>Chrome Chicken Yakisoba</h3>
+            <span class="price">$13.49</span>
+          </div>
+          <p class="desc">Wok-tossed noodles, grilled chicken, veggies, soy-ginger shine.</p>
+          <span class="spice"><b>Heat:</b> Medium</span>
+        </article>
+
+        <article class="item">
+          <div class="item-top">
+            <h3>Redline Inferno Ramen</h3>
+            <span class="price">$14.49</span>
+          </div>
+          <p class="desc">Spicy miso broth, chili oil, hot pepper crunch, “don’t blink” heat.</p>
+          <span class="spice"><b>Heat:</b> Neon Heat</span>
+        </article>
+      </div>
+    </section>
+    <section class="section" id="drinks">
+      <div class="section-header">
+        <h2>Drinks</h2>
+        <small>Cold glow, clean recharge.</small>
+      </div>
+
+      <div class="grid">
+        <article class="item">
+          <div class="item-top">
+            <h3>Photon Citrus Soda</h3>
+            <span class="price">$3.49</span>
+          </div>
+          <p class="desc">Bright citrus fizz with a cyber-cool finish.</p>
+          <span class="spice"><b>Type:</b> Cold-Glow</span>
+        </article>
+
+        <article class="item">
+          <div class="item-top">
+            <h3>Neon Hibiscus Iced Tea</h3>
+            <span class="price">$3.99</span>
+          </div>
+          <p class="desc">Hibiscus tea over ice, light sweetness, floral and smooth.</p>
+          <span class="spice"><b>Type:</b> Cold-Glow</span>
+        </article>
+
+        <article class="item">
+          <div class="item-top">
+            <h3>Matcha “Green Code” Latte</h3>
+            <span class="price">$4.99</span>
+          </div>
+          <p class="desc">Creamy matcha, subtle vanilla, steady energy—no crash.</p>
+          <span class="spice"><b>Type:</b> Hot/Cold</span>
+        </article>
+      </div>
+    </section>
+    <section class="section" id="desserts">
+      <div class="section-header">
+        <h2>Desserts</h2>
+        <small>Street-sweet, neon-lit.</small>
+      </div>
+
+      <div class="grid">
+        <article class="item">
+          <div class="item-top">
+            <h3>Glitch Mochi (3pc)</h3>
+            <span class="price">$5.49</span>
+          </div>
+          <p class="desc">Assorted mochi bites with a soft, chilled center.</p>
+          <span class="spice"><b>Type:</b> Street-Sweet</span>
+        </article>
+
+        <article class="item">
+          <div class="item-top">
+            <h3>Neon Donut “Ring Hack”</h3>
+            <span class="price">$4.49</span>
+          </div>
+          <p class="desc">Warm donut ring with electric-pink glaze and sugar spark.</p>
+          <span class="spice"><b>Type:</b> Street-Sweet</span>
+        </article>
+
+        <article class="item">
+          <div class="item-top">
+            <h3>Skyline Sundae</h3>
+            <span class="price">$6.99</span>
+          </div>
+          <p class="desc">Vanilla ice cream, berry drizzle, crunchy “city lights” topping.</p>
+          <span class="spice"><b>Type:</b> Street-Sweet</span>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
