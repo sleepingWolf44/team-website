@@ -20,24 +20,158 @@
     <h1>Noodles</h1>
     <div id="flex">
         <div id="ClassicNoodles">
-            <p></p>
+            <div id="flexOrder">
+                <span id="OrderItem">Midnight Ramen//Classic-12.99$</span>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div id="flexOrder">
+                <input type="button" value="-" id="Orderbutton" onclick="Cn(1)">
+                <p id="Cnspan" class="Orderbutton">0</p>
+                <input type="button" value="+" id="Orderbutton" onclick="Cn(0)">
+            </div>
         </div>
         <div id="ChikenandEgg">
-            <p></p>
-        </div>
-        <div id="Stirfry">
-            <p></p>
-        </div>
-        <div id="Spicy">
-            <p></p>
+            <div id="flexOrder">
+                <span id="OrderItem">Chrome Chicken Yakisoba-13.49$</span>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div id="flexOrder">
+                <input type="button" value="-" id="Orderbutton" onclick="Ce(1)">
+                <p id="Cespan" class="Orderbutton">0</p>
+                <input type="button" value="+" id="Orderbutton" onclick="Ce(0)">
+            </div>
         </div>
         <div id="Redhot">
-            <p></p>
+            <div id="flexOrder">
+                <span id="OrderItem">Redline Inferno Ramen-14.49$</span>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div id="flexOrder">
+                <input type="button" value="-" id="Orderbutton" onclick="R(1)">
+                <p id="Rspan" class="Orderbutton">0</p>
+                <input type="button" value="+" id="Orderbutton" onclick="R(0)">
+            </div>
         </div>
     </div>
     <h1>Appetizers</h1>
-
+    <div id="flex">
+        <div id="gyoza">
+            <div id="flexOrder">
+                <span id="OrderItem">Neon Gyoza(6pc)-7.99$</span>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div id="flexOrder">
+                <input type="button" value="-" id="Orderbutton" onclick="G(1)">
+                <p id="Gspan" class="Orderbutton">0</p>
+                <input type="button" value="+" id="Orderbutton" onclick="G(0)">
+            </div>
+        </div>
+        <div id="Tempura">
+            <div id="flexOrder">
+                <span id="OrderItem">Circuit Tempura Shrooms-8.49$</span>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div id="flexOrder">
+                <input type="button" value="-" id="Orderbutton" onclick="T(1)">
+                <p id="Tspan" class="Orderbutton">0</p>
+                <input type="button" value="+" id="Orderbutton" onclick="T(0)">
+            </div>
+        </div>
+        <div id="Bao">
+            <div id="flexOrder">
+                <span id="OrderItem">Byte-Size Bao(2pc)-6.99$</span>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div id="flexOrder">
+                <input type="button" value="-" id="Orderbutton" onclick="B(1)">
+                <p id="Bspan" class="Orderbutton">0</p>
+                <input type="button" value="+" id="Orderbutton" onclick="B(0)">
+            </div>
+        </div>
+    </div>
     <h1>Drinks</h1>
-
+    <div id="flex">
+        <div id="Orange">
+            <div id="flexOrder">
+                <span id="OrderItem">Photon Citrus Soda-3.49$</span>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div id="flexOrder">
+                <input type="button" value="-" id="Orderbutton" onclick="O(1)">
+                <p id="Ospan" class="Orderbutton">0</p>
+                <input type="button" value="+" id="Orderbutton" onclick="O(0)">
+            </div>
+        </div>
+        <div id="Tea">
+            <div id="flexOrder">
+                <span id="OrderItem">Noen Hibiscus Iced Tea-3.99$</span>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div id="flexOrder">
+                <input type="button" value="-" id="Orderbutton" onclick="Tea(1)">
+                <p id="Teaspan" class="Orderbutton">0</p>
+                <input type="button" value="+" id="Orderbutton" onclick="Tea(0)">
+            </div>
+        </div>
+        <div id="Matcha">
+            <div id="flexOrder">
+                <span id="OrderItem">Matcha "Green Code" Latte-4.99$</span>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div id="flexOrder">
+                <input type="button" value="-" id="Orderbutton" onclick="M(1)">
+                <p id="Mspan" class="Orderbutton">0</p>
+                <input type="button" value="+" id="Orderbutton" onclick="M(0)">
+            </div>
+        </div>
+    </div>
+    <span>Card:</span><input type="text">
+    <span>Address</span><input type="text">
+    <input type="button" value="Finish Order" id="Order" onclick="Ordernow()">
 </body>
 </html>
