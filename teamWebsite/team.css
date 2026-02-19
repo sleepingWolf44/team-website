@@ -43,17 +43,113 @@ body{
     background-color: rgb(71, 74, 76);
 }
 #ClassicNoodles{
-
+    width: 15%;
+    height: 15%;
+    margin: 2%;
+    background-image: url(./imgs/ClassicNoodles.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 #ChikenandEgg{
-
-}
-#Stirfry{
-
+    width: 15%;
+    height: 15%;
+    margin: 2%;
+    background-image: url(./imgs/ChikenandEgg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }    
-#Spicy{
-
-}       
 #Redhot{
-    
+    width: 15%;
+    height: 15%;
+    margin: 2%;
+    background-image: url(./imgs/Redhot.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#orderItem{
+    margin: 0%;
+    padding: 0%;
+    border: 0%;
+    text-align: center;
+    font-size: 15%;
+}
+.Orderbutton{
+    background-color: rgb(168, 168, 168);
+    margin: 0%;
+    padding: 0%;
+    border: 0%;
+    text-align: center;
+    width: 100%;
+    opacity: 70%;
+}
+#Orderbutton{
+    background-color: rgb(168, 168, 168);
+    margin: 0%;
+    padding: 0%;
+    border: 0%;
+    text-align: center;
+    width: 100%;
+    opacity: 70%;
+}
+#flexOrder{
+    margin: 0%;
+    padding: 0%;
+    border: 0%;
+    display: flex;
+    width: 100%;
+    height: 20%;
+}
+#gyoza{
+    width: 15%;
+    height: 15%;
+    margin: 2%;
+    background-image: url(./imgs/chicken-gyoza.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#Tempura{
+    width: 15%;
+    height: 15%;
+    margin: 2%;
+    background-image: url(./imgs/Mushroom-tempura-4-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}    
+#Bao{
+    width: 15%;
+    height: 15%;
+    margin: 2%;
+    background-image: url(./imgs/bao.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#Orange{
+    width: 15%;
+    height: 15%;
+    margin: 2%;
+    background-image: url(./imgs/orange.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#Tea{
+    width: 15%;
+    height: 15%;
+    margin: 2%;
+    background-image: url(./imgs/Tea.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}    
+#Matcha{
+    width: 15%;
+    height: 15%;
+    margin: 2%;
+    background-image: url(./imgs/matcha.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#Order{
+    font-size: larger;
+    width: 20%;
+    height: 50px;
+    background-color: rgb(46, 40, 51);
 }
