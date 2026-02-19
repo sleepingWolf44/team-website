@@ -7,17 +7,17 @@
         <meta name="google" content="notranslate">
         <script src="./team.js"></script>
         <link rel="stylesheet" href="./team.css">
-        <link rel="stylesheet" href="./font.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Geostar&family=Neonderthaw&display=swap" rel="stylesheet">
         <style>
-            body {
-                background-color: #30183a;
-            }
             h1, h2, h3, h4, h5, h6 {
-                font-family: 'NeonSignFont', 'Comic Sans MS';
-                font-size: 475%;
+                font-size: 275%;
             }
-            .outlined {
-                border: 25%;
+            .neonderthaw-regular {
+                font-family: "Neonderthaw", Arial;
+                font-weight: 400;
+                font-style: normal;
             }
         </style>
     </head>
@@ -25,14 +25,14 @@
         <nav>
             <div id="customfont">
                 <div id="flex">
-                    <input type="button" value="Home" id="navbutton" onclick="Home()" style="font-family: 'NeonSignFont', 'Comic Sans MS';">
-                    <input type="button" value="Menu" id="navbutton" onclick="Menu()" style="font-family: 'NeonSignFont', 'Comic Sans MS';">
-                    <input type="button" value="Order" id="navbutton" onclick="Order()" style="font-family: 'NeonSignFont', 'Comic Sans MS';">
-                    <input type="button" value="Contacts" id="navbutton" onclick="Contacts()" style="font-family: 'NeonSignFont', 'Comic Sans MS';">
+                    <input type="button" value="Home" id="navbutton" onclick="Home()" style="font-family: 'Geostar', sans-serif; ">
+                    <input type="button" value="Menu" id="navbutton" onclick="Menu()" style="font-family: 'Geostar', sans-serif;">
+                    <input type="button" value="Order" id="navbutton" onclick="Order()" style="font-family: 'Geostar', sans-serif;">
+                    <input type="button" value="Contacts" id="navbutton" onclick="Contacts()" style="font-family: 'Geostar', sans-serif;">
                 </div>
             </div>
             <img src="./imgs/midnightCity.png" alt="midnightCity" id="banner">
         </nav>
-        <h1 style="color: red;" class="outlined">Test</h1>
+        <h1 style="color: rgb(168, 62, 221); text-align: center;" class="neonderthaw-regular">Welcome</h1>
     </body>
 </html>
