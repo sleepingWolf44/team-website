@@ -1,86 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-                    <meta charset="UTF-8" />
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                    <meta name="google" content="notranslate" />
-                    <title>/|\ Noodles Past Midnight - Menu /|\</title>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google" content="notranslate" />
 
-                    <script src="./team.js"></script>
-                    <link rel="stylesheet" href="./team.css" />
-                    <link rel="stylesheet" href="./font.css" />
-                    <title>Contact Us!</title>
+    <title>Contact Us | Noodles Past Midnight</title>
 
-    </head>
-    <body>
+    <link rel="stylesheet" href="./team.css" />
+    <link rel="stylesheet" href="./font.css" />
+</head>
 
-        <div class="container">
-            <form action="action_page.php">
+<body>
+    <nav class="navbar">
+    <div class="logo">Noodles Past Midnight</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="reservations.html">Reservations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+<div class="container">
 
-                <label for="fname">First</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
-                        <br>
+    <form action="action_page.php" method="POST">
+
+        <label for="fname">First</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+
+        <label for="lname">Last</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+
+        <label for="section">Sections</label>
+                                <br>
                         <p style="margin-left: 40px;"></p>
-                <label for="lname">Last</label>
-                <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
-                        <br>
+
+        <select id="section" name="section" required>
+
+            <optgroup label="Front Right">
+                <option value="front-right-table-1">Table 1</option>
+                <option value="front-right-table-2">Table 2</option>
+                <option value="front-right-table-3">Table 3</option>
+                <option value="front-right-table-4">Table 4</option>
+                <option value="front-right-table-5">Table 5</option>
+            </optgroup>
+
+            <optgroup label="Front Left">
+                <option value="front-left-table-1">Table 1</option>
+                <option value="front-left-table-2">Table 2</option>
+                <option value="front-left-table-3">Table 3</option>
+                <option value="front-left-table-4">Table 4</option>
+                <option value="front-left-table-5">Table 5</option>
+            </optgroup>
+
+            <optgroup label="Back Right">
+                <option value="back-right-table-1">Table 1</option>
+                <option value="back-right-table-2">Table 2</option>
+                <option value="back-right-table-3">Table 3</option>
+                <option value="back-right-table-4">Table 4</option>
+                <option value="back-right-table-5">Table 5</option>
+            </optgroup>
+
+            <optgroup label="Back Left">
+                <option value="back-left-table-1">Table 1</option>
+                <option value="back-left-table-2">Table 2</option>
+                <option value="back-left-table-3">Table 3</option>
+                <option value="back-left-table-4">Table 4</option>
+                <option value="back-left-table-5">Table 5</option>
+            </optgroup>
+
+        </select>
+
+        <label for="subject">Reservation Notes & Details</label>
+                                <br>
                         <p style="margin-left: 40px;"></p>
-                <label for="sections">Sections</label>
-                <select id="section" name="section">
-                    <label="xyz"></label>
+        <textarea id="subject" name="subject" placeholder="Write something.." required></textarea>
 
-                        <optgroup label="front-right">front-right</option>
-                        <option value="table:1">table:1</option>
-                        <option value="table:2">table:2</option>
-                        <option value="table:3">table:3</option>
-                        <option value="table:4">table:4</option>
-                        <option value="table:5">table:5</option>
-                        
-                        <optgroup label="front-left">front-left</option>
-                        <option value="table:1">table:1</option>
-                        <option value="table:2">table:2</option>
-                        <option value="table:3">table:3</option>
-                        <option value="table:4">table:4</option>
-                        <option value="table:5">table:5</option>
+        <input type="submit" value="Submit">
 
-                        <optgroup label="back-right">back-right</option>
-                        <option value="table:1">table:1</option>
-                        <option value="table:2">table:2</option>
-                        <option value="table:3">table:3</option>
-                        <option value="table:4">table:4</option>
-                        <option value="table:5">table:5</option>
+    </form>
 
-                        <optgroup label="back-left">back-left</option>
-                        <option value="table:1">table:1</option>
-                        <option value="table:2">table:2</option>
-                        <option value="table:3">table:3</option>
-                        <option value="table:4">table:4</option>
-                        <option value="table:5">table:5</option>
-               </select>
-                        <br>
-                        <p style="margin-left: 40px;"></p>
-               <label for="reservation Notes & details">Reservation Notes & Details</label> <!--change name to smthn else - sarai | update finished - sarai--> 
-                        <br>
-                        <p style="margin-left: 40px;"></p>
-                   <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" style="min-width:150px"></textarea>
-                        <br>
-                        <p style="margin-left: 40px;"></p>
-                       <input type="submit" value="Submit">
-
-            </form>
-            <script>
-  document.getElementById("contactForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent actual form submission
-
-    alert("Your message has been sent successfully. We'll get back to you soon!");
-
-    this.reset(); // Clear the form
-  });
-</script>
-
-        </div>
-        </body>
-    </head>
+</div>
+</body>
 </html>
-
 
