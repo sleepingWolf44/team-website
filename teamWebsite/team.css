@@ -3,6 +3,23 @@ body{
     padding: 0;
     border: 0;
 }
+body{
+            background: radial-gradient(1200px 700px at 15% 10%, rgba(255, 61, 245, 0.253), transparent 55%),
+                radial-gradient(1000px 600px at 85% 20%, rgba(0, 255, 255, 0.137), transparent 55%),
+                radial-gradient(900px 600px at 55% 85%, rgba(170, 255, 0, 0.123), transparent 90%),
+                var(--bg);
+                color: var(--text);
+        }
+:root{
+                --bg: #0b0f1a;
+                --panel: rgba(10, 14, 28, 0.78);
+                --stroke: rgba(255, 61, 245, 0.35);
+                --neon-pink: rgba(255, 61, 245, 0.95);
+                --neon-cyan: rgba(0, 255, 255, 0.85);
+                --neon-lime: rgba(168, 255, 0, 0.85);
+                --text: rgba(235, 235, 255, 0.92);
+                --muted: rgba(235, 235, 255, 0.70);
+    }
 ul{
     margin: 0;
     padding: 0;
@@ -242,4 +259,5 @@ span{
 .nav-links li a:hover {
     color: #ff7b00;
 }
+
 
