@@ -1,30 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Contact Us!</title>
+                    <meta charset="UTF-8" />
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                    <meta name="google" content="notranslate" />
+                    <title>/|\ Noodles Past Midnight - Menu /|\</title>
+
+                    <script src="./team.js"></script>
+                    <link rel="stylesheet" href="./team.css" />
+                    <link rel="stylesheet" href="./font.css" />
+                    <title>Contact Us!</title>
+
+    </head>
+    <body>
 
         <div class="container">
             <form action="action_page.php">
 
                 <label for="fname">First</label>
                 <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                <br>
+                        <br>
+                        <p style="margin-left: 40px;"></p>
                 <label for="lname">Last</label>
                 <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-                <br>
-                <p style="margin-left: 40px;"></p>
-                <label for="country">Country</label>
-                <select id="country" name="country">
-                  <option value="australia">Australia</option>
-                  <option value="canada">Canada</option>
-                  <option value="usa">USA</option>
+                        <br>
+                        <p style="margin-left: 40px;"></p>
+                <label for="sections">Sections</label>
+                <select id="section" name="section">
+                    <label="xyz"></label>
+
+                        <optgroup label="front-right">front-right</option>
+                        <option value="table:1">table:1</option>
+                        <option value="table:2">table:2</option>
+                        <option value="table:3">table:3</option>
+                        <option value="table:4">table:4</option>
+                        <option value="table:5">table:5</option>
+                        
+                        <optgroup label="front-left">front-left</option>
+                        <option value="table:1">table:1</option>
+                        <option value="table:2">table:2</option>
+                        <option value="table:3">table:3</option>
+                        <option value="table:4">table:4</option>
+                        <option value="table:5">table:5</option>
+
+                        <optgroup label="back-right">back-right</option>
+                        <option value="table:1">table:1</option>
+                        <option value="table:2">table:2</option>
+                        <option value="table:3">table:3</option>
+                        <option value="table:4">table:4</option>
+                        <option value="table:5">table:5</option>
+
+                        <optgroup label="back-left">back-left</option>
+                        <option value="table:1">table:1</option>
+                        <option value="table:2">table:2</option>
+                        <option value="table:3">table:3</option>
+                        <option value="table:4">table:4</option>
+                        <option value="table:5">table:5</option>
                </select>
-                <br>
-               <label for="subject">Subject</label> <!--change name to smthn else-->
-                   <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                        <br>
+                        <p style="margin-left: 40px;"></p>
+               <label for="reservation Notes & details">Reservation Notes & Details</label> <!--change name to smthn else - sarai | update finished - sarai--> 
+                        <br>
+                        <p style="margin-left: 40px;"></p>
+                   <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" style="min-width:150px"></textarea>
+                        <br>
+                        <p style="margin-left: 40px;"></p>
                        <input type="submit" value="Submit">
 
             </form>
+            <script>
+  document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent actual form submission
+
+    alert("Your message has been sent successfully. We'll get back to you soon!");
+
+    this.reset(); // Clear the form
+  });
+</script>
+
         </div>
+        </body>
     </head>
 </html>
+
