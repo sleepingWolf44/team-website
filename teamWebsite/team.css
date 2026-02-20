@@ -206,3 +206,40 @@ span{
                 color: var(--text);
     opacity: 80%;
 }
+
+/* NAVBAR */
+.navbar { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 15px 40px;
+        position: sticky;
+    top: 0;
+    z-index: 1000;
+
+}
+
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #ff7b00;
+}
+
